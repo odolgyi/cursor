@@ -4,8 +4,8 @@ import java.util.Collections;
 public class Test1 {
     public static void main(String[] args) {
         sortArrayByDesc();
-        arraySum();
-        averageSum();
+        sumArrayOfPositiveNumber();
+        average();
         removeDuplicatedNumber();
     }
 
@@ -18,23 +18,25 @@ public class Test1 {
         }
     }
 
-    public static void arraySum() {
-        int sum = 0;
+    public static void sumArrayOfPositiveNumber() {
+        int sumArrayOfPositiveNumber = 0;
         int[] list = new int[]{2, -3, 1, -7, 11};
-        for (Integer integer : list) {
-            sum += integer;
+        for (int number : list) {
+            if (number > 0) {
+                sumArrayOfPositiveNumber += number;
+            }
         }
-        System.out.println("\n" +"array sum");
-        System.out.println(sum);
+        System.out.println("\n" + "array sum of positive number");
+        System.out.println(sumArrayOfPositiveNumber);
     }
 
-    public static void averageSum() {
-        int sum = 0;
-        int[] list = new int[]{4, 7, 2, 2, 5};
-        for (long number : list) {
+    public static void average() {
+        double sum = 0;
+        double[] list = new double[]{4, 7, 2, 2, 5};
+        for (double number : list) {
             sum += number;
         }
-        int averageValue = sum / list.length;
+        double averageValue = sum / list.length;
         System.out.println("average sum");
         System.out.println(averageValue);
     }
