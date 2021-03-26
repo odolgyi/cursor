@@ -2,7 +2,6 @@ package Homework2;
 
 public class Circle {
     private double radius;
-    private double diameter = radius * 2;
 
     public Circle(double radius) {
         this.radius = radius;
