@@ -1,7 +1,7 @@
-package Homework2;
+package homework2;
 
-import Homework2.Money.Money;
-import Homework2.car.Car;
+import homework2.money.Money;
+import homework2.car.Car;
 
 public class Demo {
     public static void main(String[] args) {
@@ -36,7 +36,7 @@ public class Demo {
         System.out.println(fraction1.toString() + " - " + fraction2.toString() + " = " + fraction1.subtraction(fraction2));
         System.out.println(fraction1.toString() + " * " + fraction2.toString() + " = " + fraction1.multiply(fraction2));
         System.out.println(fraction1.toString() + " / " + fraction2.toString() + " = " + fraction1.division(fraction2));
-        System.out.println(fraction1.toString() + " is equal to " + fraction2.toString() + " = " + fraction1.isEqual(fraction2));
+        System.out.println(fraction1.toString() + " is equal to " + fraction2.toString() + " = " + fraction1.equals(fraction2));
 
         //Exercise 5
         Money yourMoney = new Money(1, (byte) 90);
@@ -52,10 +52,10 @@ public class Demo {
         System.out.println(yourMoney.toString() + " multiply on " + new Money(2, (byte) 0).toString() + " =" + multiply);
 
         var twoHryvnia = new Money(2, (byte) 0);
-        System.out.println(yourMoney.toString() + " is not equal to " + twoHryvnia.toString() + " = " + yourMoney.isEqual(twoHryvnia));
+        System.out.println(yourMoney.toString() + " is not equal to " + twoHryvnia.toString() + " = " + yourMoney.equals(twoHryvnia));
 
         var oneHryvnia = new Money(1, (byte) 0);
-        System.out.println(yourMoney.toString() + " is equal to " + oneHryvnia.toString() + " = " + yourMoney.isEqual(oneHryvnia));
+        System.out.println(yourMoney.toString() + " is equal to " + oneHryvnia.toString() + " = " + yourMoney.equals(oneHryvnia));
 
     }
 }

@@ -1,4 +1,6 @@
-package Homework2.Money;
+package homework2.money;
+
+import java.util.Objects;
 
 public class Money {
     private long hryvnia;
@@ -44,8 +46,17 @@ public class Money {
         return multiplyDoubleNumbers(moneyToDouble(money));
     }
 
-    public boolean isEqual(Money money) {
-        return this.hryvnia == money.hryvnia && this.kopeck == money.kopeck;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Money money = (Money) o;
+        return hryvnia == money.hryvnia && kopeck == money.kopeck;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(hryvnia, kopeck);
     }
 
     private Money multiplyDoubleNumbers(double number) {
@@ -55,7 +66,7 @@ public class Money {
 
     private Money divDoubleNumbers(double number) {
         if (number < 0) {
-            throw new IllegalArgumentException("Can not divide on negative numbers");
+            throw new RuntimeException("Can not divide on negative numbers");
         }
         double money = moneyToDouble(this);
         return doubleToMoney(money / number);
@@ -67,7 +78,7 @@ public class Money {
         return new Money(hryvnias, kopecks);
     }
 
-    private static double moneyToDouble(Money money) {
+    private double moneyToDouble(Money money) {
         return (money.hryvnia * 100 + money.kopeck) / 100d;
     }
 

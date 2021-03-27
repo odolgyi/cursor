@@ -1,4 +1,6 @@
-package Homework2;
+package homework2;
+
+import java.util.Objects;
 
 public class Fraction {
     private long numerator;
@@ -6,7 +8,7 @@ public class Fraction {
 
     public Fraction(long numerator, short denominator) {
         if (denominator == 0) {
-            throw new ArithmeticException("Denominator can't be null");
+            throw new RuntimeException("Denominator can't be null");
         } else {
             this.numerator = numerator;
             this.denominator = denominator;
@@ -37,8 +39,17 @@ public class Fraction {
         return new Fraction(resNumerator, resDenominator);
     }
 
-    public boolean isEqual(Fraction fraction) {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fraction fraction = (Fraction) o;
         return (double) numerator / denominator == (double) fraction.numerator / fraction.denominator;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numerator, denominator);
     }
 
     @Override
