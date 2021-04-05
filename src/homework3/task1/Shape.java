@@ -1,4 +1,4 @@
-package homework3;
+package homework3.task1;
 
 import homework3.task1.planeshape.Vertex2D;
 

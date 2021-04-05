@@ -1,7 +1,6 @@
 package homework3.task1;
 
 
-import homework3.Shape;
 import homework3.task1.planeshape.Vertex2D;
 import homework3.task1.planeshape.shape2D.Circle;
 import homework3.task1.planeshape.shape2D.Rectangle;
