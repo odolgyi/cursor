@@ -6,7 +6,8 @@ import homework3.task1.planeshape.Vertex2D;
 import homework3.task1.planeshape.PlaneShape;
 
 public class Rectangle extends PlaneShape implements PerimeterMeasurable, AreaMeasurable {
-    private final double width, height;
+    private final double width;
+    private final double height;
 
     public Rectangle(Vertex2D vertex, double width, double height) {
         super(vertex);

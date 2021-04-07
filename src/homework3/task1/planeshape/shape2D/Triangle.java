@@ -6,7 +6,9 @@ import homework3.task1.planeshape.PlaneShape;
 import homework3.task1.planeshape.Vertex2D;
 
 public class Triangle extends PlaneShape implements PerimeterMeasurable, AreaMeasurable {
-    private final double lengthA, lengthB, lengthC;
+    private final double lengthA;
+    private final double lengthB;
+    private final double lengthC;
 
     public Triangle(Vertex2D firstVertex, Vertex2D secondVertex, Vertex2D thirdVertex) {
         super(firstVertex, secondVertex, thirdVertex);

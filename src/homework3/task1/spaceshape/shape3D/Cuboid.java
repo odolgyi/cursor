@@ -4,7 +4,9 @@ import homework3.task1.spaceshape.SpaceShape;
 import homework3.task1.spaceshape.Vertex3D;
 
 public class Cuboid extends SpaceShape {
-    private final double width, height, depth;
+    private final double width;
+    private final double height;
+    private final double depth;
 
     public Cuboid(Vertex3D vertex, double width, double height, double depth) {
         super(vertex);

@@ -4,7 +4,8 @@ import homework3.task1.spaceshape.SpaceShape;
 import homework3.task1.spaceshape.Vertex3D;
 
 public class SquarePyramid extends SpaceShape {
-    private final double width, height;
+    private final double width;
+    private final double height;
 
     public SquarePyramid(Vertex3D vertex, double width, double height) {
         super(vertex);
