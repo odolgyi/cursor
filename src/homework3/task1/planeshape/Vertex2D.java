@@ -23,6 +23,6 @@ public class Vertex2D {
 
     @Override
     public String toString() {
-        return "Vertices{" + "x=" + x + ", y=" + y + '}';
+        return getClass().getSimpleName() + ", {" + "x=" + x + ", y=" + y + '}';
     }
 }

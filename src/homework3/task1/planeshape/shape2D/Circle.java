@@ -7,11 +7,10 @@ import homework3.task1.planeshape.PlaneShape;
 
 public class Circle extends PlaneShape implements PerimeterMeasurable, AreaMeasurable {
 
-    private final Vertex2D vertex;
     private final double radius;
 
     public Circle(Vertex2D vertex, double radius) {
-        this.vertex = vertex;
+        super(vertex);
         this.radius = radius;
     }
 
@@ -23,15 +22,5 @@ public class Circle extends PlaneShape implements PerimeterMeasurable, AreaMeasu
     @Override
     public double getPerimeter() {
         return 2 * Math.PI * radius;
-    }
-
-    @Override
-    public String toString() {
-        return "Circle{" +
-                "vertex =" + vertex.toString() + "; " +
-                "radius  =" + radius + "; " +
-                "perimeter =" + getPerimeter() + "; " +
-                "area =" + getArea() + "; " +
-                '}';
     }
 }

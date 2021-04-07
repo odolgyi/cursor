@@ -4,11 +4,10 @@ import homework3.task1.spaceshape.SpaceShape;
 import homework3.task1.spaceshape.Vertex3D;
 
 public class Cuboid extends SpaceShape {
-    private final Vertex3D vertex;
     private final double width, height, depth;
 
-    public Cuboid(Vertex3D a, double width, double height, double depth) {
-        vertex = a;
+    public Cuboid(Vertex3D vertex, double width, double height, double depth) {
+        super(vertex);
         this.width = width;
         this.height = height;
         this.depth = depth;
@@ -22,17 +21,5 @@ public class Cuboid extends SpaceShape {
     @Override
     public double getVolume() {
         return width * height * depth;
-    }
-
-    @Override
-    public String toString() {
-        return "Cuboid{" +
-                "vertex =" + vertex.toString() + "; " +
-                "width  =" + width + "; " +
-                "height =" + height + "; " +
-                "depth =" + depth + "; " +
-                "volume =" + getVolume() + "; " +
-                "area =" + getArea() + "; " +
-                '}';
     }
 }

@@ -14,8 +14,7 @@ import java.util.Arrays;
 
 public class Demo {
     public static void main(String[] args) {
-        Vertex2D[] array = new Vertex2D[]{new Vertex2D(2, 3), new Vertex2D(6, 3), new Vertex2D(6, -5)};
-        Shape triangle = new Triangle(array);
+        Shape triangle = new Triangle(new Vertex2D(2, 3), new Vertex2D(6, 3), new Vertex2D(6, -5));
         Shape circle = new Circle(new Vertex2D(2, 3), 6);
         Shape rectangle = new Rectangle(new Vertex2D(2, 3), 6, 4);
         Shape sphere = new Sphere(new Vertex3D(2, 3, 1), 6);

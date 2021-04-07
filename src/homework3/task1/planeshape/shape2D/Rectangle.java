@@ -6,11 +6,10 @@ import homework3.task1.planeshape.Vertex2D;
 import homework3.task1.planeshape.PlaneShape;
 
 public class Rectangle extends PlaneShape implements PerimeterMeasurable, AreaMeasurable {
-    private final Vertex2D vertex;
     private final double width, height;
 
-    public Rectangle(Vertex2D a, double width, double height) {
-        vertex = a;
+    public Rectangle(Vertex2D vertex, double width, double height) {
+        super(vertex);
         this.width = width;
         this.height = height;
 
@@ -24,16 +23,5 @@ public class Rectangle extends PlaneShape implements PerimeterMeasurable, AreaMe
     @Override
     public double getPerimeter() {
         return 2 * (width + height);
-    }
-
-    @Override
-    public String toString() {
-        return "Rectangle{" +
-                "vertex =" + vertex.toString() + "; " +
-                "width  =" + width + "; " +
-                "height =" + height + "; " +
-                "perimeter =" + getPerimeter() + "; " +
-                "area =" + getArea() + "; " +
-                '}';
     }
 }
