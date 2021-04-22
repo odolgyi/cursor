@@ -1,4 +1,6 @@
-package homework13;
+package homework13.carType;
+
+import homework13.entry.Car;
 
 public class Sedan extends Car {
     public Sedan() {

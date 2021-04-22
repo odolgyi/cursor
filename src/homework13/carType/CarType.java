@@ -1,4 +1,4 @@
-package homework13;
+package homework13.carType;
 
 public enum CarType {
         MINI_TRUCK,

@@ -1,4 +1,11 @@
-package homework13;
+package homework13.factory;
+
+import homework13.carType.CarType;
+import homework13.carType.Hatchback;
+import homework13.carType.MiniTruck;
+import homework13.carType.Pickup;
+import homework13.carType.Sedan;
+import homework13.entry.Car;
 
 public class CarFactory {
 
